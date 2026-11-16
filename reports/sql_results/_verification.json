@@ -1,0 +1,149 @@
+{
+  "all_pass": true,
+  "checks": [
+    {
+      "metric": "净收入合计",
+      "sql": 19013836.26,
+      "pandas": 19013836.27,
+      "abs_diff": 0.01,
+      "tolerance": 1.0,
+      "unit": "GBP",
+      "pass": true
+    },
+    {
+      "metric": "销售收入合计",
+      "sql": 20476260.44,
+      "pandas": 20476260.45,
+      "abs_diff": 0.01,
+      "tolerance": 1.0,
+      "unit": "GBP",
+      "pass": true
+    },
+    {
+      "metric": "退款总额",
+      "sql": -1462424.18,
+      "pandas": -1462424.18,
+      "abs_diff": 0.0,
+      "tolerance": 1.0,
+      "unit": "GBP",
+      "pass": true
+    },
+    {
+      "metric": "订单数合计",
+      "sql": 40077.0,
+      "pandas": 40077.0,
+      "abs_diff": 0.0,
+      "tolerance": 0,
+      "unit": "单",
+      "pass": true
+    },
+    {
+      "metric": "月份数",
+      "sql": 25.0,
+      "pandas": 25.0,
+      "abs_diff": 0.0,
+      "tolerance": 0,
+      "unit": "月",
+      "pass": true
+    },
+    {
+      "metric": "客户数",
+      "sql": 5878.0,
+      "pandas": 5878.0,
+      "abs_diff": 0.0,
+      "tolerance": 0,
+      "unit": "人",
+      "pass": true
+    },
+    {
+      "metric": "复购客户数",
+      "sql": 4255.0,
+      "pandas": 4255.0,
+      "abs_diff": 0.0,
+      "tolerance": 0,
+      "unit": "人",
+      "pass": true
+    },
+    {
+      "metric": "复购率(%)",
+      "sql": 72.39,
+      "pandas": 72.3886,
+      "abs_diff": 0.0014,
+      "tolerance": 0.01,
+      "unit": "%",
+      "pass": true
+    },
+    {
+      "metric": "客户收入合计",
+      "sql": 17374804.26,
+      "pandas": 17374804.27,
+      "abs_diff": 0.01,
+      "tolerance": 1.0,
+      "unit": "GBP",
+      "pass": true
+    },
+    {
+      "metric": "RFM 分层收入合计",
+      "sql": 17374804.27,
+      "pandas": 17374804.26,
+      "abs_diff": 0.01,
+      "tolerance": 1.0,
+      "unit": "GBP",
+      "pass": true
+    },
+    {
+      "metric": "RFM 客户数合计",
+      "sql": 5878.0,
+      "pandas": 5878.0,
+      "abs_diff": 0.0,
+      "tolerance": 0,
+      "unit": "人",
+      "pass": true
+    },
+    {
+      "metric": "前10%客户累计收入占比(%)",
+      "sql": 63.9,
+      "pandas": 63.8948,
+      "abs_diff": 0.0052,
+      "tolerance": 0.35,
+      "unit": "%",
+      "pass": true
+    },
+    {
+      "metric": "退款总额（07 汇总）",
+      "sql": 1462424.18,
+      "pandas": 1462424.18,
+      "abs_diff": 0.0,
+      "tolerance": 1.0,
+      "unit": "GBP",
+      "pass": true
+    },
+    {
+      "metric": "英国收入占比(2011同口径,%)",
+      "sql": 84.06,
+      "pandas": 84.0641,
+      "abs_diff": 0.0041,
+      "tolerance": 0.05,
+      "unit": "%",
+      "pass": true
+    },
+    {
+      "metric": "TOP10 商品累计收入占比(%)",
+      "sql": 8.04,
+      "pandas": 8.0431,
+      "abs_diff": 0.0031,
+      "tolerance": 0.05,
+      "unit": "%",
+      "pass": true
+    },
+    {
+      "metric": "有效商品数",
+      "sql": 4719.0,
+      "pandas": 4719.0,
+      "abs_diff": 0.0,
+      "tolerance": 0,
+      "unit": "个",
+      "pass": true
+    }
+  ]
+}
