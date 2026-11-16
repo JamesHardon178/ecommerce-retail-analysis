@@ -1,0 +1,43 @@
+# ===== 数据（原始数据与中间产物不入库）=====
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+# 校验和是「数据可复现」的凭据，体积极小，需要入库
+!data/raw/CHECKSUM.txt
+*.xlsx
+*.xls
+*.csv.gz
+*.zip
+
+# ===== 数据库 =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== Python =====
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ===== 环境与密钥 =====
+.env
+.env.*
+
+# ===== 编辑器 / 系统 =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Streamlit =====
+.streamlit/secrets.toml
+
+# ===== 其他 =====
+~$*
