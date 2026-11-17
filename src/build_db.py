@@ -178,6 +178,23 @@ def compute_core_metrics(sales: pd.DataFrame, returns: pd.DataFrame, quality: di
     )
     monthly["aov"] = monthly["revenue"] / monthly["orders"]
 
+    # 同口径年度窗口（数据止于 2011-12-09，直接比自然年会低估 2011）
+    def _window(start: str, end: str) -> pd.DataFrame:
+        return sales[(sales["InvoiceDate"] >= start) & (sales["InvoiceDate"] <= end + " 23:59:59")]
+
+    w2010, w2011 = _window("2010-01-01", "2010-12-09"), _window("2011-01-01", "2011-12-09")
+    uk_share_y2011 = float(
+        w2011.loc[w2011["Country"] == "United Kingdom", "Revenue"].sum() / w2011["Revenue"].sum()
+    )
+    uk_share_y2010 = float(
+        w2010.loc[w2010["Country"] == "United Kingdom", "Revenue"].sum() / w2010["Revenue"].sum()
+    )
+    nonuk_yoy = float(
+        (w2011.loc[w2011["Country"] != "United Kingdom", "Revenue"].sum()
+         - w2010.loc[w2010["Country"] != "United Kingdom", "Revenue"].sum())
+        / w2010.loc[w2010["Country"] != "United Kingdom", "Revenue"].sum()
+    )
+
     metrics = {
         "date_range": [quality["volume"]["date_min"][:10], quality["volume"]["date_max"][:10]],
         "raw_rows": quality["volume"]["total_rows_raw"],
@@ -196,6 +213,9 @@ def compute_core_metrics(sales: pd.DataFrame, returns: pd.DataFrame, quality: di
         "orders_per_customer_mean": round(float(orders_per_customer.mean()), 4),
         "revenue_per_customer_mean": round(float(cust.groupby("CustomerID")["Revenue"].sum().mean()), 2),
         "uk_revenue_share": round(uk_share, 6),
+        "uk_revenue_share_y2010_window": round(uk_share_y2010, 6),
+        "uk_revenue_share_y2011_window": round(uk_share_y2011, 6),
+        "nonuk_revenue_yoy": round(nonuk_yoy, 6),
         "top5_country_share": round(top5_country_share, 6),
         "top10_product_share": round(top10_prod_share, 6),
         "unique_products": int(goods["StockCode"].nunique()),
