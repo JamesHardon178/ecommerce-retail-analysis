@@ -23,6 +23,25 @@
 速览版见 [reports/key_findings.md](reports/key_findings.md)，
 简历可直接引用的表述见 [reports/resume_bullets.md](reports/resume_bullets.md)。
 
+## 📊 看板展示
+
+### 1. 总览与核心指标
+![总览页](reports/screenshots/01_overview.png)
+
+### 2. 业务洞察与策略建议
+![业务结论](reports/screenshots/02_business_insights.png)
+
+### 3. 高级分析模型（Cohort 留存）
+![Cohort留存](reports/screenshots/03_cohort_retention.png)
+
+### 4. 数据口径与严谨性验证（交叉对账/自动化测试）
+![验证通过](reports/screenshots/04_verification.png)
+
+---
+
+## 数据背景与方法论
+（这里接你原本的“本项目采用 2009-2011 年的经典零售数据集...”）
+
 ## 数据背景与方法论
 
 本项目采用 2009-2011 年的经典零售数据集，核心价值不在于呈现历史报表，而是为了验证一套**"从海量脏数据走向业务决策"的标准化分析框架**（包含行数守恒断言、16 项交叉验证对账、Cohort 归因等）。该管线具备高复用性，替换为任意现代业务底表，即可快速输出同等深度的商业诊断报告。
